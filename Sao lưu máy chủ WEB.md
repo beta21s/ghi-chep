@@ -1,8 +1,8 @@
 
 ## Sao lưu trên máy tính local
 
-##
-nano ~/.my.cnf
+```
+#nano ~/.my.cnf
 
 [mysql]
 host=localhost
@@ -23,6 +23,7 @@ password=""
 host=localhost
 user=root
 password=""
+```
 
 ### Sao lưu CSDL MySQL
 
