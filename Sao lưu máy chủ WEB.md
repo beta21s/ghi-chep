@@ -1,6 +1,29 @@
 
 ## Sao lưu trên máy tính local
 
+##
+nano ~/.my.cnf
+
+[mysql]
+host=localhost
+user=root
+password=""
+
+[mysqldump]
+host=localhost
+user=root
+password=""
+
+[mysqlhotcopy]
+host=localhost
+user=root
+password=""
+
+[mysqladmin]
+host=localhost
+user=root
+password=""
+
 ### Sao lưu CSDL MySQL
 
 ```
