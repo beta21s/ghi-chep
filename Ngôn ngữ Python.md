@@ -95,11 +95,12 @@ from pdf2image import convert_from_path
 images = convert_from_path(path, grayscale=True)
 for i in range(len(images)):
     images[i].save( folder + '/page'+ str(i) +'.jpg', 'JPEG')
-``
+```
 
 ### Chuyển đổi file ảnh sang PDF
 
 Cài đặt thư viện
+
 ```
 pip install img2pdf
 ```
