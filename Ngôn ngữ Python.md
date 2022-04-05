@@ -110,3 +110,20 @@ import img2pdf
 with open("output/" + filename,"wb") as f:
     f.write(img2pdf.convert(glob.glob(folder + "/*.jpg")))
 ```
+
+### Save data sang một file json và ngược lại
+
+Ghi file
+```
+import json
+with open('error.json', 'w', encoding='utf8') as outfile:
+    json.dump(list_file_errror, outfile, ensure_ascii=False)
+```
+
+Đọc file
+```
+import json
+dsfile = []
+with open('data.json', encoding='utf8') as json_file:
+    dsfile = json.load(json_file)
+```
