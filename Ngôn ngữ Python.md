@@ -108,4 +108,4 @@ pip install img2pdf
 import img2pdf
 with open("output/" + filename,"wb") as f:
     f.write(img2pdf.convert(glob.glob(folder + "/*.jpg")))
-``
+```
