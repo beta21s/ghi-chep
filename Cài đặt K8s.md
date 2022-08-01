@@ -19,10 +19,22 @@ kubectl get pods --all-namespaces
 
 Xoá một pods
 ```
-kubectl delete pod <pods name>
+  <pods name>
 ```
 
-Xoá tất cả pods trong một namespace
+Xoá tất cả pods trong một namespace ```<name>```
 ```
-kubectl delete pods --all --grace-period=0 --force --namespace namespace
+kubectl delete --all deployments --namespace=<name>
 ```
+
+Lấy thông tin chi tiết một services
+```
+kubectl -n kubernetes-dashboard get service kubernetes-dashboard
+```
+
+Triển khai ứng dg trên template
+```
+kubectl delete -f recommended.yaml
+
+```
+
