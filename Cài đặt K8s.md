@@ -35,6 +35,10 @@ kubectl -n kubernetes-dashboard get service kubernetes-dashboard
 Triển khai ứng dg trên template
 ```
 kubectl delete -f recommended.yaml
+```
 
+Tạo tolken kubernetes-dashboard
+```
+kubectl -n kubernetes-dashboard create token admin-user
 ```
 
