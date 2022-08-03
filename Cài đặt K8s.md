@@ -42,3 +42,8 @@ Tạo tolken kubernetes-dashboard
 kubectl -n kubernetes-dashboard create token admin-user
 ```
 
+Thực thi lệnh bash trên container trên K8s
+```
+kubectl exec -ti --namespace <namespace> <pod-name>  bash
+```
+
