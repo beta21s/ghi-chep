@@ -1,5 +1,6 @@
+# Cấu hình hệ thống Ubuntu
 
-## Thay đổi thời gian
+#### Cấu hình thời gian
 
 ```
 timedatectl 
@@ -7,3 +8,4 @@ timedatectl set-timezone Asia/Ho_Chi_Minh
 Hoặc
 sudo dpkg-reconfigure tzdata
 ```
+
