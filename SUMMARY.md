@@ -10,6 +10,7 @@
 
 ## Cấu hình Ubuntu
 
+* [Quản lý FILE](cau-hinh-ubuntu/quan-ly-file.md)
 * [MySQL](cau-hinh-ubuntu/mysql.md)
 * [Cấu hình hệ thống Ubuntu](cau-hinh-ubuntu/cau-hinh-ubuntu.md)
 * [Sao lưu MySQL + Source Linux](cau-hinh-ubuntu/sao-luu-may-chu-web.md)
