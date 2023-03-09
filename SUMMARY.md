@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Cài đặt K8s](README.md)
+* [Cấu hình Kubernetes](README.md)
 * [Docker](Docker.md)
 * [Ngôn ngữ Python](<Ngôn ngữ Python.md>)
 
