@@ -2,6 +2,67 @@
 
 ### Nginx Proxy Pass
 
+#### HTTP
+
+```
+server {
+    listen 80;
+    server_name 7tudong.com;
+
+    gzip on;
+    gzip_types text/plain application/xml text/css application/javascript;
+    gzip_min_length 1000;
+    
+    if ($host != "7tudong.com") {
+ 		return 404;
+	}
+
+    location / {
+        proxy_redirect  off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto  $scheme;
+        proxy_read_timeout          1m;
+        proxy_connect_timeout       1m;
+        proxy_pass http://172.20.10.2:7950;
+    }
+}
+
+```
+
+#### HTTPS
+
+```
+server {
+	listen 80;
+	server_name cctv.vlute.edu.vn;
+	rewrite ^(.*) https://cctv.vlute.edu.vn$1 permanent;
+}
+
+server {
+	listen 443 ssl;
+    server_name cctv.vlute.edu.vn;
+    ssl_certificate /etc/letsencrypt/live/cctv.vlute.edu.vn/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/cctv.vlute.edu.vn/privkey.pem;
+
+	if ($host != "cctv.vlute.edu.vn") {
+ 		return 404;
+	}
+
+    location / {
+		allow all;
+		proxy_set_header Host $host;
+		proxy_set_header Connection "upgrade";
+		proxy_set_header Connection $http_connection;
+		proxy_pass http://172.20.201.51;
+		proxy_http_version 1.1;
+		proxy_set_header Upgrade $http_upgrade;
+	}
+
+}
+```
+
 #### Jupyter Notebook
 
 ```bash
