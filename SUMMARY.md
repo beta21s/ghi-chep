@@ -14,3 +14,4 @@
 ***
 
 * [SSH key-gen](ssh-key-gen.md)
+* [Nginx](nginx.md)
