@@ -1,6 +1,12 @@
 # Nginx
 
+```
+sudo apt install nginx
+```
+
 ### Nginx Proxy Pass
+
+
 
 #### HTTP
 

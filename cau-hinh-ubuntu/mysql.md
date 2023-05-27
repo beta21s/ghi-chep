@@ -9,22 +9,46 @@ sudo systemctl start mysql.service
 sudo mysql
 ```
 
+#### Cấu hình MySQL
+
+<pre class="language-bash" data-overflow="wrap"><code class="lang-bash">sudo mysql -u root -p
+<strong>------
+</strong>ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '123456';
+FLUSH PRIVILEGES;
+
+</code></pre>
+
 #### Cài đặt phpMyAdmin
 
+{% code overflow="wrap" %}
 ```bash
-sudo apt-get install -y phpmyadmin php-mbstring php-gettext
-
-# Chọn máy chủ Apache
+sudo apt install phpmyadmin php-mbstring \
+php-zip php-gd php-json php-curl
 ```
+{% endcode %}
+
+Chọn máy chủ `apache2`
+
+<figure><img src="../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
+
+Thực hiện cấu hình mật khẩu của `MySQL` trên `PhpMyadmin`
+
+<figure><img src="../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+
+Nhập mật khẩu của `MySQL`
 
 <figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
-#### Cấu hình MySQL
+Thay đổi cổng dịch vụ
 
 ```
-sudo mysql -u root -p
-ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY ‘123456’;
-
+nano /etc/apache2/ports.conf
 ```
 
-mysqli\_real\_connect(): (HY000/1698): Access denied for user 'root'@'localhost'
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
+```
+sudo systemctl enable apache2 
+sudo systemctl start apache2
+sudo systemctl restart apache2
+```
