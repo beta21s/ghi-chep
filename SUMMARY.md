@@ -1,7 +1,8 @@
 # Table of contents
 
 * [Cấu hình Kubernetes](README.md)
-* [Docker](Docker.md)
+* [Docker](docker/README.md)
+  * [MinIO](docker/minio.md)
 * [Ngôn ngữ Python](<Ngôn ngữ Python.md>)
 
 ## Cấu hình Ubuntu
